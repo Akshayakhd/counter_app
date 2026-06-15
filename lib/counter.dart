@@ -36,14 +36,38 @@ class Counter extends StatelessWidget {
                     onPressed: () {
                       context.read<Countcontroller>().decrement();
                     },
-                    child: Text("-"),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(80, 80),
+                      shape: CircleBorder(),
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                    ),
+                    child: Text(
+                      "-",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                   SizedBox(width: 20),
                   ElevatedButton(
                     onPressed: () {
                       context.read<Countcontroller>().increment();
                     },
-                    child: Text("+"),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(80, 80),
+                      shape: CircleBorder(),
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                    ),
+                    child: Text(
+                      "+",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ],
               ),
